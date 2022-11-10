@@ -11,3 +11,5 @@ Code for forward Euler, Runge-Kutta 4th order, Patankar-Euler, modified Patankar
 
 
 <a href="url"><img src="figs/solver.png" width=100% height=100% ></a> 
+
+Thanks to Illviljan who provided Python code on the [scipy repo](https://www.google.com/url?q=https://github.com/scipy/scipy/issues/12766&source=gmail&ust=1668179153456000&usg=AOvVaw1pcFVTnn_7VWccx5UFKYD3).
