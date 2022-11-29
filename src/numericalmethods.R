@@ -144,15 +144,15 @@ r = avec[,1] * 0
 for (i in t[2:length(t)]){
   # dc1/dt = c2 - a c1
   # dc2/dt = a c1 - c2
-  p1 = c(0, c2modpteuler[match(i, t) -1])
-  p2 = c(a * c1modpteuler[match(i, t) -1],0)
+  p1 = c(0, c2modptrk[match(i, t) -1])
+  p2 = c(a * c1modptrk[match(i, t) -1],0)
   d1 = p2
   d2 = p1
   p0 = matrix(c(p1,p2), nrow = len_y0, ncol = len_y0, byrow = T)
   d0 = matrix(c(d1,d2), nrow = len_y0, ncol = len_y0, byrow = T)
   
-  ydat = c(c1modpteuler[match(i, t) -1],
-           c2modpteuler[match(i, t) -1])
+  ydat = c(c1modptrk[match(i, t) -1],
+           c2modptrk[match(i, t) -1])
   
   avec[eye] = dt * c(sum(d1),
                      sum(d2)) / ydat +1
